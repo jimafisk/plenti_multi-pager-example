@@ -1,4 +1,8 @@
 {
 	"title": "Multi-pager Example",
-  "body": "This site has 2 content types: cats & dogs. We created tables for each on the <a href='/animals'>Animals page</a>. This shows how you could have multiple pagers in one URL pattern."
+  "body": [
+    "This site has 2 content types: cats & dogs.",
+    "We created tables for each on the <a href='/animals/cats/dogs'>Animals page</a>.",
+    "This shows how you could have multiple pagers in one URL pattern."
+  ]
 }

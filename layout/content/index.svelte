@@ -4,4 +4,6 @@
 
 <h1>{title}</h1>
 
-<div>{@html body}</div>
+{#each body as p}
+  <p>{@html p}</p>
+{/each}

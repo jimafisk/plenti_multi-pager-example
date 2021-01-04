@@ -1,5 +1,8 @@
 {
 	"build": "public",
+  "types": {
+    "animals": "/animals/cats/:paginate(totalCatPages)/dogs/:paginate(totalDogPages)"
+  },
 	"local": {
 		"port": 3000
 	}
