@@ -4,7 +4,7 @@
 
 <ul>
   {#if currentDogsPage > 1}
-    <li><a href="/animals/cats/1/dogs/1">first</a></li>
+    <li><a href="/animals/cats/{currentCatsPage}/dogs/1">first</a></li>
     <li><a href="/animals/cats/{currentCatsPage}/dogs/{currentDogsPage - 1}">prev</a></li>
   {:else}
     <li><span>first</span></li>
@@ -23,7 +23,7 @@
   {/each}
   {#if currentDogsPage < totalDogPages}
     <li><a href="/animals/cats/{currentCatsPage}/dogs/{currentDogsPage + 1}">next</a></li>
-    <li><a href="/animals/cats/{totalCatPages}/dogs/{totalDogPages}">last</a></li>
+    <li><a href="/animals/cats/{currentCatsPage}/dogs/{totalDogPages}">last</a></li>
   {:else}
     <li><span>next</span></li>
     <li><span>last</span></li>
