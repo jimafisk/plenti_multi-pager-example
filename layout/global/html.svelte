@@ -7,6 +7,6 @@
 <html lang="en">
 <Head title={content.filename} />
 <body>
-  <svelte:component this={route} {...content.fields} {allContent} />
+  <svelte:component this={route} {...content.fields} {content} {allContent} />
 </body>
 </html>
