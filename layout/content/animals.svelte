@@ -1,6 +1,7 @@
 <script>
   export let title, content, allContent;
-  import Pager from '../components/pager.svelte';
+  import CatPager from '../components/cat_pager.svelte';
+  import DogPager from '../components/dog_pager.svelte';
 
   $: currentCatsPage = content.pager[0];
   let allCats = allContent.filter(content => content.type == "cats");
@@ -43,7 +44,7 @@
   </tbody>
 </table>
 
-<Pager currentPage={currentCatsPage} totalPages={totalCatPages} />
+<CatPager {currentCatsPage} {totalCatPages} {currentDogsPage} {totalDogPages} />
 
 <h3>Dogs</h3>
 <table>
@@ -67,6 +68,6 @@
   </tbody>
 </table>
 
-<Pager currentPage={currentDogsPage} totalPages={totalDogPages} />
+<DogPager {currentDogsPage} {totalDogPages} {currentCatsPage} {totalCatPages} />
 
 <a href="/">Home</a>
