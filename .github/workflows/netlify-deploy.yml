@@ -17,15 +17,12 @@ jobs:
           entrypoint: /plenti
           args: build
 
-      - name: Rename public folder
-        run: |
-          pwd
-          ls -lah /
-          mv public /build
-
-      - name: Deploy Netlify
-        uses: danakim/gh-action-deploy-netlify@master
+      - name: Setup Node
+        uses: actions/setup-node@v2-beta
         with:
-          AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          DEPLOY_PROD: true
+          node-version: '13'
+
+      - name: Deploy to Netlify
+        run: |
+          npm install netlify-cli -g
+          netlify deploy --prod --dir ./public --site=${{ secrets.NETLIFY_SITE_ID }} --auth=${{ secrets.NETLIFY_AUTH_TOKEN }} --timeout=600 --message "Deployed on $(date)"
