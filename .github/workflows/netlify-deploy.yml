@@ -18,7 +18,9 @@ jobs:
           args: build
 
       - name: Rename public folder
-        run: mv public /github/home/build
+        run:
+          - pwd
+          - ls -lah
 
       - name: Deploy Netlify
         uses: danakim/gh-action-deploy-netlify@master
