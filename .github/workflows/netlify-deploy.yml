@@ -20,7 +20,8 @@ jobs:
       - name: Rename public folder
         run: |
           pwd
-          ls -lah
+          ls -lah /
+          mv public /build
 
       - name: Deploy Netlify
         uses: danakim/gh-action-deploy-netlify@master
