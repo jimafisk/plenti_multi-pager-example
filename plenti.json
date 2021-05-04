@@ -1,6 +1,6 @@
 {
 	"build": "public",
-  "types": {
+  "routes": {
     "animals": "/animals/cats/:paginate(totalCatPages)/dogs/:paginate(totalDogPages)"
   },
 	"local": {
