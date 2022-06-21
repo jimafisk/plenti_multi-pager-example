@@ -1,5 +1,5 @@
 {
-	"title": "Multi-pager Example",
+  "title": "Multi-pager Example 2",
   "body": [
     "This site has 2 content types: cats & dogs.",
     "We created tables for each on the <a href='/animals/cats/dogs'>Animals page</a>.",
