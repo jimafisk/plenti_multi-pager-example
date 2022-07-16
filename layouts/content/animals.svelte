@@ -3,7 +3,7 @@
   import CatPager from '../components/cat_pager.svelte';
   import DogPager from '../components/dog_pager.svelte';
 
-  $: currentCatsPage = Array.isArray(content.pager) ? content.pager[0] : content.pager;
+  $: currentCatsPage = Array.isArray(content.pager) ? content.pager[0] : 1;
   let allCats = allContent.filter(content => content.type == "cats");
   let totalCats = allCats.length;
   let catsPerPage = 2;
@@ -11,7 +11,7 @@
   $: catsRangeHigh = currentCatsPage * catsPerPage;
   $: catsRangeLow = catsRangeHigh - catsPerPage;
 
-  $: currentDogsPage = Array.isArray(content.pager) ? content.pager[1] : content.pager;
+  $: currentDogsPage = Array.isArray(content.pager) ? content.pager[1] : 1;
   let allDogs = allContent.filter(content => content.type == "dogs");
   let totalDogs = allDogs.length;
   let dogsPerPage = 2;
